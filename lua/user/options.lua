@@ -8,13 +8,14 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 lvim.builtin.breadcrumbs.active = false
 lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.dap.active = true
-lvim.builtin.cmp.cmdline.enable = false
-lvim.builtin.cmp.experimental.enabled = true
-vim.opt.showtabline = 1
+lvim.builtin.project.active = false
+lvim.builtin.cmp.experimental.ghost_text = true
+lvim.builtin.cmp.completion.autocomplete = false
 
--- lvim.colorscheme = "gruvbox"
 -- lvim.builtin.illuminate.active = false
-lvim.transparent_window = true
+vim.opt.showtabline = 1
+lvim.colorscheme = "tokyonight-night"
+lvim.transparent_window = false
 
 -- Adiciona o nome do arquivo no lualine
 -- lvim.builtin.lualine.on_config_done = function()
@@ -52,8 +53,8 @@ local options = {
   updatetime = 40,                          -- faster completion (4000ms default)
   writebackup = false,                      -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
   expandtab = true,                         -- convert tabs to spaces
-  shiftwidth = 2,                           -- the number of spaces inserted for each indentation
-  tabstop = 2,                              -- insert 2 spaces for a tab
+  shiftwidth = 4,                           -- the number of spaces inserted for each indentation
+  tabstop = 4,                              -- insert 2 spaces for a tab
   cursorline = true,                        -- highlight the current line
   number = true,                            -- set numbered lines
   laststatus = 3,

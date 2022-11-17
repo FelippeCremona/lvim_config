@@ -1,6 +1,6 @@
-vim.opt_local.shiftwidth = 2
-vim.opt_local.tabstop = 2
-vim.opt_local.cmdheight = 0 -- more space in the neovim command line for displaying messages
+vim.opt_local.shiftwidth = 4
+vim.opt_local.tabstop = 4
+vim.opt_local.cmdheight = 1 -- more space in the neovim command line for displaying messages
 
 local capabilities = require("lvim.lsp").common_capabilities()
 
@@ -149,11 +149,11 @@ local config = {
       references = {
         includeDecompiledSources = false,
       },
-      -- inlayHints = {
-      --   parameterNames = {
-      --     enabled = "all", -- literals, all, none
-      --   },
-      -- },
+      inlayHints = {
+        parameterNames = {
+          enabled = "all", -- literals, all, none
+        },
+      },
       format = {
         enabled = false,
         -- settings = {
@@ -161,20 +161,22 @@ local config = {
         -- }
       },
     },
-    signatureHelp = { enabled = true },
+    signatureHelp = { enabled = false },
     completion = {
+      -- favoriteStaticMembers = {
+      --   "org.hamcrest.MatcherAssert.assertThat",
+      --   "org.hamcrest.Matchers.*",
+      --   "org.hamcrest.CoreMatchers.*",
+      --   "org.junit.jupiter.api.Assertions.*",
+      --   "java.util.Objects.requireNonNull",
+      --   "java.util.Objects.requireNonNullElse",
+      --   "org.mockito.Mockito.*",
+      -- },
       favoriteStaticMembers = {
-        "org.hamcrest.MatcherAssert.assertThat",
-        "org.hamcrest.Matchers.*",
-        "org.hamcrest.CoreMatchers.*",
-        "org.junit.jupiter.api.Assertions.*",
-        "java.util.Objects.requireNonNull",
-        "java.util.Objects.requireNonNullElse",
-        "org.mockito.Mockito.*",
       },
     },
-    contentProvider = { preferred = "fernflower" },
-    extendedClientCapabilities = extendedClientCapabilities,
+    -- contentProvider = { preferred = "fernflower" },
+    -- extendedClientCapabilities = extendedClientCapabilities,
     sources = {
       organizeImports = {
         starThreshold = 9999,

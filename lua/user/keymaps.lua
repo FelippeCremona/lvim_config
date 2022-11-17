@@ -6,12 +6,21 @@ local opts = { noremap = true, silent = true }
 
 local keymap = vim.keymap.set
 
+-- Normal --
 keymap("n", "<C-Space>", "<cmd>WhichKey \\<space><cr>", opts)
-keymap("n", "<C-i>", "<C-i>", opts)
+-- keymap("n", "<C-i>", "<C-i>", opts)
 
 keymap("n", "tt", "zt", opts)
 
--- Normal --
+keymap("n", "ciu", "ci(", opts)
+keymap("n", "yiu", "yi(", opts)
+keymap("n", "diu", "di(", opts)
+keymap("n", "viu", "vi(", opts)
+
+keymap("n", "<Space>df", "Vf{%d", opts)
+keymap("n", "<Space>yf", "Vf{%y", opts)
+
+
 -- Better window navigation
 keymap("n", "<m-h>", "<C-w>h", opts)
 keymap("n", "<m-j>", "<C-w>j", opts)
@@ -109,5 +118,11 @@ keymap("n", "<Tab>", ":bnext<CR>", opts)
 keymap("n", "<S-Tab>", ":bprevious<CR>", opts)
 keymap("n", "<C-w>", ":bd<CR>", opts)
 
+-- Atalho Telescope
+keymap("n", ",f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", ",g", "<cmd>Telescope live_grep<cr>", opts)
+
+    -- Atalho LSP
+keymap("n", "<C-A-o>", "<Cmd>lua require'jdtls'.organize_imports()<CR>", opts)
 
 return M
