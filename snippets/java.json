@@ -1,0 +1,49 @@
+{
+    "joinColum": {
+        "prefix": "_joinColum",
+        "body": [
+            "@JoinColumn(name=\"${1:FK}\", referencedColumnName=\"${2:PK}\")"
+        ],
+        "description": "Relaciona tabelas diferentes"
+    },
+
+    "test": {
+        "prefix": "_test",
+        "body": [
+            "(name=${1:parameter}, version='latest')"
+        ],
+        "description": "test"
+    },
+
+    "oneToMany": {
+        "prefix": "_oneToMany",
+        "body": [
+            "@OneToMany(fetch=FetchType.EAGER)",
+            "@JoinColumn(name=\"${1:FK}\", referencedColumnName=\"${2:PK}\")",
+            "public List<${3:object}> lista${3} = new ArrayList<${3}>();"
+        ],
+        "description": "Mapeia relacionamentos um para muitos"
+    },
+
+    "listar_criteria": {
+        "prefix": "_listar_criteria",
+        "body": [
+            "public List<${1:object}> listar${1}() {",
+                "    CriteriaBuilder criteriaBuilder = this.em.getCriteriaBuilder();",
+                "    CriteriaQuery<${1}> query = criteriaBuilder.createQuery(${1}.class);",
+                "",
+                "    //Root<${1}> root = query.from(${1}.class);",
+                "",
+                "    //Adiciona where",
+                "    //if(parametro != null) query.where(criteriaBuilder.equal(root.get(\"parametro\").get(\"id\"), parametro));",
+                "",
+                "    //Adiciona ordenamento",
+                "    //query.orderBy(Arrays.asList(criteriaBuilder.asc(root.get(\"nome\"))));",
+                "",
+                "    return this.em.createQuery(query).getResultList();",
+                "}"
+        ],
+        "description": "Cria Criteria para listar objetos"
+    }
+
+}

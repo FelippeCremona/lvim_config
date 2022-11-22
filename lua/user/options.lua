@@ -3,19 +3,27 @@ lvim.builtin.alpha.active = false
 -- lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.bufferline.active = true
 lvim.builtin.terminal.active = false
-lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 lvim.builtin.breadcrumbs.active = false
 lvim.builtin.treesitter.highlight.enabled = true
-lvim.builtin.dap.active = true
 lvim.builtin.project.active = false
+lvim.builtin.dap.active = true
+vim.opt.showtabline = 1
+
+-- lvim.lsp.diagnostics.virtual_text = true
+
+-- NVIMTREE
+lvim.builtin.nvimtree.setup.view.side = "left"
+lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
+
+-- CMP
 lvim.builtin.cmp.experimental.ghost_text = true
 lvim.builtin.cmp.completion.autocomplete = false
+lvim.builtin.cmp.window.documentation = false
 
 -- lvim.builtin.illuminate.active = false
-vim.opt.showtabline = 1
 lvim.colorscheme = "tokyonight-night"
 lvim.transparent_window = false
+
 
 -- Adiciona o nome do arquivo no lualine
 -- lvim.builtin.lualine.on_config_done = function()

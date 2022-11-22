@@ -163,17 +163,17 @@ local config = {
     },
     signatureHelp = { enabled = false },
     completion = {
-      -- favoriteStaticMembers = {
-      --   "org.hamcrest.MatcherAssert.assertThat",
-      --   "org.hamcrest.Matchers.*",
-      --   "org.hamcrest.CoreMatchers.*",
-      --   "org.junit.jupiter.api.Assertions.*",
-      --   "java.util.Objects.requireNonNull",
-      --   "java.util.Objects.requireNonNullElse",
-      --   "org.mockito.Mockito.*",
-      -- },
       favoriteStaticMembers = {
+        "org.hamcrest.MatcherAssert.assertThat",
+        "org.hamcrest.Matchers.*",
+        "org.hamcrest.CoreMatchers.*",
+        "org.junit.jupiter.api.Assertions.*",
+        "java.util.Objects.requireNonNull",
+        "java.util.Objects.requireNonNullElse",
+        "org.mockito.Mockito.*",
       },
+      -- favoriteStaticMembers = {
+      -- },
     },
     -- contentProvider = { preferred = "fernflower" },
     -- extendedClientCapabilities = extendedClientCapabilities,

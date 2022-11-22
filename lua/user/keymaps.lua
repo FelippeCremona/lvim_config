@@ -6,9 +6,13 @@ local opts = { noremap = true, silent = true }
 
 local keymap = vim.keymap.set
 
+-- Insert --
+keymap("i", "<C-c>", "<Esc>", opts)
+
 -- Normal --
 keymap("n", "<C-Space>", "<cmd>WhichKey \\<space><cr>", opts)
 -- keymap("n", "<C-i>", "<C-i>", opts)
+
 
 keymap("n", "tt", "zt", opts)
 
@@ -16,6 +20,10 @@ keymap("n", "ciu", "ci(", opts)
 keymap("n", "yiu", "yi(", opts)
 keymap("n", "diu", "di(", opts)
 keymap("n", "viu", "vi(", opts)
+
+
+keymap("n", ",at", "vat=<C-o>", opts)
+keymap("n", ",af", "va{=<C-o>", opts)
 
 keymap("n", "<Space>df", "Vf{%d", opts)
 keymap("n", "<Space>yf", "Vf{%y", opts)
@@ -122,7 +130,8 @@ keymap("n", "<C-w>", ":bd<CR>", opts)
 keymap("n", ",f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", ",g", "<cmd>Telescope live_grep<cr>", opts)
 
-    -- Atalho LSP
+-- Atalho LSP
 keymap("n", "<C-A-o>", "<Cmd>lua require'jdtls'.organize_imports()<CR>", opts)
+keymap("n", "<C-A-n>", "<cmd>lua vim.diagnostic.goto_next({buffer=0})<CR>  <cmd>lua vim.lsp.buf.code_action()<cr> ", opts)
 
 return M

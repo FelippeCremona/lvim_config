@@ -62,14 +62,14 @@ lvim.plugins = {
 			})
 		end,
 	},
-	{
-		"jinh0/eyeliner.nvim",
-		config = function()
-			require("eyeliner").setup({
-				highlight_on_key = true,
-			})
-		end,
-	},
+	-- {
+	-- 	"jinh0/eyeliner.nvim",
+	-- 	config = function()
+	-- 		require("eyeliner").setup({
+	-- 			highlight_on_key = true,
+	-- 		})
+	-- 	end,
+	-- },
 	{ "christianchiarulli/telescope-tabs", branch = "chris" },
 	"monaqa/dial.nvim",
 	{

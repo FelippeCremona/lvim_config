@@ -4,7 +4,6 @@ require("user.lsp.languages.python")
 require("user.lsp.languages.js-ts")
 
 lvim.format_on_save = false
-lvim.lsp.diagnostics.virtual_text = false
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
