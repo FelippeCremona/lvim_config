@@ -1,6 +1,6 @@
 vim.opt_local.shiftwidth = 4
 vim.opt_local.tabstop = 4
-vim.opt_local.cmdheight = 1 -- more space in the neovim command line for displaying messages
+vim.opt_local.cmdheight = 0 -- more space in the neovim command line for displaying messages
 
 local capabilities = require("lvim.lsp").common_capabilities()
 
