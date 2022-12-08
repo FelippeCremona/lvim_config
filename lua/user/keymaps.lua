@@ -129,6 +129,7 @@ keymap("n", "<C-w>", ":bd<CR>", opts)
 -- Atalho Telescope
 keymap("n", ",f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", ",g", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<C-r>", "<cmd>lua require('telescope.builtin').lsp_references()<cr>", opts)
 
 -- Atalho LSP
 keymap("n", "<C-A-o>", "<Cmd>lua require'jdtls'.organize_imports()<CR>", opts)

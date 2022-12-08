@@ -26,16 +26,16 @@ lvim.transparent_window = false
 
 
 -- Adiciona o nome do arquivo no lualine
--- lvim.builtin.lualine.on_config_done = function()
---   local sections = lvim.builtin.lualine.sections.lualine_b
---   if sections and #sections == 1 then
---     vim.list_extend(sections, { {
---       "filename",
---       color = {},
---       cond = nil,
---     } })
---   end
--- end
+lvim.builtin.lualine.on_config_done = function()
+  local sections = lvim.builtin.lualine.sections.lualine_b
+  if sections and #sections == 1 then
+    vim.list_extend(sections, { {
+      "filename",
+      color = {},
+      cond = nil,
+    } })
+  end
+end
 
 local options = {
   backup = false,                           -- creates a backup file

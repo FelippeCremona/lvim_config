@@ -21,7 +21,7 @@ require("user.colorizer")
 
 -- Plugins que não sei o que faz
 require("user.jaq")
-require("user.lab")
+-- require("user.lab")
 require("user.bqf")
 require("user.dial")
 require("user.numb")

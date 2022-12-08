@@ -2,27 +2,29 @@
     "joinColum": {
         "prefix": "_joinColum",
         "body": [
-            "@JoinColumn(name=\"${1:FK}\", referencedColumnName=\"${2:PK}\")"
+            "@JoinColumn(name = \"${1:FK}\", referencedColumnName=\"${2:PK}\")"
         ],
         "description": "Relaciona tabelas diferentes"
-    },
-
-    "test": {
-        "prefix": "_test",
-        "body": [
-            "(name=${1:parameter}, version='latest')"
-        ],
-        "description": "test"
     },
 
     "oneToMany": {
         "prefix": "_oneToMany",
         "body": [
             "@OneToMany(fetch=FetchType.EAGER)",
-            "@JoinColumn(name=\"${1:FK}\", referencedColumnName=\"${2:PK}\")",
-            "public List<${3:object}> lista${3} = new ArrayList<${3}>();"
+            "@JoinColumn(name = \"${1:FK}\", referencedColumnName=\"${2:PK}\")",
+            "private List<${3:object}> lista${3} = new ArrayList<${3}>();"
         ],
         "description": "Mapeia relacionamentos um para muitos"
+    },
+
+    "manyToOne": {
+        "prefix": "_manyToOne",
+        "body": [
+            "@ManyToOne",
+            "@JoinColumn(name = \"${1:FK}\")",
+            "private ${3:object} ${4:name};"
+        ],
+        "description": "Mapeia relacionamentos muitos para um"
     },
 
     "listar_criteria": {
