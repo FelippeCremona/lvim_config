@@ -1,0 +1,46 @@
+{
+    "_table_angular": {
+        "prefix": "_table_angular",
+        "body": [
+            "<table>",
+            "   <thead>",
+            "       <th>Coluna</th>",
+            "   </thead>",
+            "   <tbody>",
+            "       <tr *ngFor=\"let obj of ${1:lista}\">",
+            "           <td>{{ obj }}</td>",
+            "       </tr>",
+            "   </tbody>",
+            "</table>"
+        ],
+        "description": "Cria tabela com lista passada por parametro"
+    },
+
+    "_select_angular": {
+        "prefix": "_select_angular",
+        "body": [
+            "<select [(ngModel)]=\"${1:variavel}\" (ngModelChange)=\"${2:funcao}()\">",
+            "   <option [ngValue]=\"null\">Selecione</option>",
+            "   <option *ngFor=\"let obj of ${3:lista}\" [ngValue]=\"obj\">{{ obj.nome }}</option>",
+            "</select>"
+        ],
+        "description": "Cria select com ngModel e ngModelChange"
+    },
+
+    "_botao_angular": {
+        "prefix": "_botao_angular",
+        "body": [
+            "<button type=\"button\" title=\"${1:nomeBotao}\" (click)=\"${2:funcao}()\">${1}</button>"
+        ],
+        "description": "Cria botão com click chamando função"
+    },
+
+    "_input_angular": {
+        "prefix": "_input_angular",
+        "body": [
+            "<input type=\"text\" [(ngModel)]=\"${1:variavel}\" (ngModelChange)=\"${2:funcao}()\"/>"
+        ],
+        "description": "Cria input com ngModel e ngModelChange"
+    }
+              
+}

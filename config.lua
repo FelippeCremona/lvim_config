@@ -22,10 +22,11 @@ require("user.colorizer")
 -- Plugins que não sei o que faz
 require("user.jaq")
 -- require("user.lab")
-require("user.bqf")
+-- require("user.bqf")
 require("user.dial")
 require("user.numb")
 
+require("user.fidget")
 -- require("user.cmp")
 
 -- require("user.neoscroll")
@@ -33,4 +34,5 @@ require("user.numb")
 -- require("user.zen-mode")
 -- require("user.inlay-hints")
 
-vim.cmd "source $HOME/.config/lvim/vimscript/keymaps.vim"
+-- vim.cmd "source $HOME/.config/lvim/vimscript/keymaps.vim"
+require("user.gitsigns")

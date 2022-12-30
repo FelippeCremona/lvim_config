@@ -11,5 +11,13 @@
                 "path": "./java.json"
             }
         ]
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./html.json"
+            }
+        ]
     }
 }

@@ -31,6 +31,7 @@ lvim.builtin.lualine.on_config_done = function()
   if sections and #sections == 1 then
     vim.list_extend(sections, { {
       "filename",
+      -- require("capslock").status_string,
       color = {},
       cond = nil,
     } })
@@ -42,8 +43,7 @@ local options = {
   clipboard = "unnamedplus",                -- allows neovim to access the system clipboard
   cmdheight = 0,                            -- more space in the neovim command line for displaying messages
   completeopt = { "menuone", "noselect" },  -- mostly just for cmp
-  conceallevel = 0,                         -- so that `` is visible in markdown files
-  fileencoding = "utf-8",                   -- the encoding written to a file
+  conceallevel = 0,                         -- so that `` is visible in markdown files fileencoding = "utf-8",                   -- the encoding written to a file
   hlsearch = true,                          -- highlight all matches on previous search pattern
   ignorecase = true,                        -- ignore case in search patterns
   mouse = "a",                              -- allow the mouse to be used in neovim

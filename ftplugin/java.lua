@@ -151,11 +151,11 @@ local config = {
       references = {
         includeDecompiledSources = false,
       },
-      inlayHints = {
-        parameterNames = {
-          enabled = "all", -- literals, all, none
-        },
-      },
+      -- inlayHints = {
+      --   parameterNames = {
+      --     enabled = "all", -- literals, all, none
+      --   },
+      -- },
       format = {
         enabled = false,
         -- settings = {

@@ -46,6 +46,43 @@
                 "}"
         ],
         "description": "Cria Criteria para listar objetos"
+    },
+
+    "date_format": {
+        "prefix": "_date_format",
+        "body": [
+            "SimpleDateFormat format = new SimpleDateFormat(\"dd/MM/yyyy\");",
+            "format.format(${1:date});"
+        ],
+        "description": "Formata objeto do tipo Date convertendo para String"
+    },
+
+    "native_query_single": {
+        "prefix": "_native_query_single",
+        "body": [
+            "public ${1:objeto} ${2:nomeMetodo} (){",
+            "       StringBuilder sql = new StringBuilder();",
+            "       sql.append(\"${3:query}\");",
+            "       Query query = em.createNativeQuery(sql.toString());",
+            "       //query.setParameter();",
+            "       return (${1}) query.getSingleResult();",
+            "}"
+        ],
+        "description": "Cria query nativa retornando um unico resultado"
+    },
+    
+    "native_query_list": {
+        "prefix": "_native_query_list",
+        "body": [
+            "public List<${1:objeto}> ${2:nomeMetodo} (){",
+            "       StringBuilder sql = new StringBuilder();",
+            "       sql.append(\"${3:query}\");",
+            "       Query query = em.createNativeQuery(sql.toString());",
+            "       //query.setParameter();",
+            "       return (List<${1}>) query.getResultList();",
+            "}"
+        ],
+        "description": "Cria query nativa retornando uma lista de resultados"
     }
 
 }

@@ -98,6 +98,9 @@ vim.cmd [[
 
 keymap("n", "<m-q>", ":call QuickFixToggle()<cr>", opts)
 
+-- keymap("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", opts)
+-- keymap("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", opts)
+
 M.show_documentation = function()
   local filetype = vim.bo.filetype
   if vim.tbl_contains({ "vim", "help" }, filetype) then
@@ -130,9 +133,11 @@ keymap("n", "<C-w>", ":bd<CR>", opts)
 keymap("n", ",f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", ",g", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<C-r>", "<cmd>lua require('telescope.builtin').lsp_references()<cr>", opts)
-
+keymap("n", ",d", "<cmd>lua require('telescope.builtin').diagnostics()<cr>", opts)
 -- Atalho LSP
 keymap("n", "<C-A-o>", "<Cmd>lua require'jdtls'.organize_imports()<CR>", opts)
 keymap("n", "<C-A-n>", "<cmd>lua vim.diagnostic.goto_next({buffer=0})<CR>  <cmd>lua vim.lsp.buf.code_action()<cr> ", opts)
+
+-- keymap("n", "<leader>wl", "<cmd> print(lua vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>", opts)
 
 return M
