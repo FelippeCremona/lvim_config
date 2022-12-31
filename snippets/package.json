@@ -9,14 +9,14 @@
             {
                 "language": "java",
                 "path": "./java.json"
-            }
-        ]
-    },
-    "contributes": {
-        "snippets": [
+            },
             {
                 "language": "html",
                 "path": "./html.json"
+            },
+            {
+                "language": "typescript",
+                "path": "./typescript.json"
             }
         ]
     }

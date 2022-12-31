@@ -6,7 +6,6 @@
         ],
         "description": "Relaciona tabelas diferentes"
     },
-
     "oneToMany": {
         "prefix": "_oneToMany",
         "body": [
@@ -16,7 +15,6 @@
         ],
         "description": "Mapeia relacionamentos um para muitos"
     },
-
     "manyToOne": {
         "prefix": "_manyToOne",
         "body": [
@@ -26,7 +24,6 @@
         ],
         "description": "Mapeia relacionamentos muitos para um"
     },
-
     "listar_criteria": {
         "prefix": "_listar_criteria",
         "body": [
@@ -47,7 +44,6 @@
         ],
         "description": "Cria Criteria para listar objetos"
     },
-
     "date_format": {
         "prefix": "_date_format",
         "body": [
@@ -56,7 +52,6 @@
         ],
         "description": "Formata objeto do tipo Date convertendo para String"
     },
-
     "native_query_single": {
         "prefix": "_native_query_single",
         "body": [
@@ -70,7 +65,6 @@
         ],
         "description": "Cria query nativa retornando um unico resultado"
     },
-    
     "native_query_list": {
         "prefix": "_native_query_list",
         "body": [
@@ -84,5 +78,4 @@
         ],
         "description": "Cria query nativa retornando uma lista de resultados"
     }
-
 }

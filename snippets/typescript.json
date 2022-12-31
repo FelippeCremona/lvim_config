@@ -1,0 +1,21 @@
+{
+    "HttpClientModule_import": {
+        "prefix": "_HttpClientModule_import",
+        "body": ["import { HttpClientModule } from '@angular/common/http';"],
+        "description": "Cria botão com click chamando funcao"
+    },
+    "get": {
+        "prefix": "_get",
+        "body": [
+            "this.http.get('${1:url}').subscribe(retorno => {",
+            " ",
+            "})"
+        ],
+        "description": "Cria metodo GET para chamada api"
+    },
+    "post": {
+        "prefix": "_post",
+        "body": ["this.http.post('${1:url}', ${2:dto}).subscribe();"],
+        "description": "Cria botao com click chamando funcao"
+    }
+}
