@@ -2,7 +2,12 @@
     "HttpClientModule_import": {
         "prefix": "_HttpClientModule_import",
         "body": ["import { HttpClientModule } from '@angular/common/http';"],
-        "description": "Cria botão com click chamando funcao"
+        "description": "Cria import do recurso HttpClientModule necessario para chamadas http"
+    },
+    "FormsModule_import": {
+        "prefix": "_FormsModule_import",
+        "body": ["import { FormsModule } from '@angular/forms';"],
+        "description": "Cria import do recurso FormsModule necessario para o typescript interpretar variaveis do formulário"
     },
     "get": {
         "prefix": "_get",

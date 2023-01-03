@@ -1,0 +1,7 @@
+{
+    "Bootstrap_import": {
+        "prefix": "_Bootstrap_import",
+        "body": ["@import '~bootstrap/scss/bootstrap';"],
+        "description": "Cria import do Boostrap"
+    }
+}

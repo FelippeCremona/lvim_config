@@ -17,6 +17,14 @@
             {
                 "language": "typescript",
                 "path": "./typescript.json"
+            },
+            {
+                "language": "jproperties",
+                "path": "./jproperties.json"
+            },
+            {
+                "language": "scss",
+                "path": "./scss.json"
             }
         ]
     }

@@ -16,11 +16,11 @@ keymap("n", "<C-Space>", "<cmd>WhichKey \\<space><cr>", opts)
 
 keymap("n", "tt", "zt", opts)
 
-keymap("n", "ciu", "ci(", opts)
-keymap("n", "yiu", "yi(", opts)
-keymap("n", "diu", "di(", opts)
-keymap("n", "viu", "vi(", opts)
 
+-- copia a linha inteira sem pular de linha
+keymap("n", "<C-y>", "_v$y", opts)
+
+keymap("n", "<C-t>", "<cmd>:terminal<cr>i", opts)
 
 keymap("n", ",at", "vat=<C-o>", opts)
 keymap("n", ",af", "va{=<C-o>", opts)

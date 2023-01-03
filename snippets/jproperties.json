@@ -1,0 +1,37 @@
+{
+    "quarkus_cors": {
+        "prefix": "_quarkus_cors",
+        "body": [
+            "quarkus.http.cors=true",
+            "quarkus.http.cors.origins=*",
+            "quarkus.http.cors.methods=*",
+            "quarkus.http.cors.headers=*",
+            "quarkus.http.cors.exposed-headers=*",
+            "quarkus.http.limits.max-body-size=1024M"
+        ],
+        "description": "Cria diretivas do CORS no quarkus"
+    },
+    "quarkus_h2": {
+        "prefix": "_quarkus_h2",
+        "body": [
+            "quarkus.datasource.db-kind=h2",
+            "quarkus.datasource.jdbc.url=jdbc:h2:file:${1:path};AUTO_SERVER=true;DB_CLOSE_DELAY=-1",
+            "quarkus.hibernate-orm.dialect=org.hibernate.dialect.H2Dialect",
+            "#quarkus.hibernate-orm.database.generation=drop-and-create",
+            "quarkus.hibernate-orm.log.sql=true #exibe querys no console"
+        ],
+        "description": "Cria configurações referentes ao H2"
+    },
+    "quarkus_oracle": {
+        "prefix": "_quarkus_oracle",
+        "body": [
+            "quarkus.hibernate-orm.dialect=org.hibernate.dialect.Oracle10gDialect",
+            "quarkus.datasource.db-kind=oracle",
+            "quarkus.datasource.jdbc.driver=oracle.jdbc.driver.OracleDriver",
+            "quarkus.datasource.username=${1:usuario}",
+            "quarkus.datasource.password=${2:senha}",
+            "quarkus.datasource.jdbc.url=${3:url}"
+        ],
+        "description": "Cria configurações referentes ao Oracle"
+    }
+}
