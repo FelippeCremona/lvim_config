@@ -2,7 +2,7 @@
     "table_angular": {
         "prefix": "_table_angular",
         "body": [
-            "<table>",
+            "<table class=\"table\">",
             "   <thead>",
             "       <th>Coluna</th>",
             "   </thead>",
@@ -16,10 +16,24 @@
         "description": "Cria tabela com lista passada por parametro"
     },
 
+    "form_angular": {
+        "prefix": "_form_angular",
+        "body": [
+            "<form>",
+            "   <div class=\"form-group\">",
+            "       <label>${1:nomeLabel}:</label> <input type=\"text\" class=\"form-control\" [(ngModel)]=\"${2:variavel}\"/>",
+            "   </div>",
+            "   <br/>",
+            "   <button type=\"button\" class=\"btn btn-primary\" title=\"${3:nomeBotao}\" (click)=\"${4:funcaoChamadora}()\">${3}</button>",
+            "</form>"
+        ],
+        "description": "Cria exemplo de formulário"
+    },
+
     "select_angular": {
         "prefix": "_select_angular",
         "body": [
-            "<select [(ngModel)]=\"${1:variavel}\" (ngModelChange)=\"${2:funcao}()\">",
+            "<select class=\"form-control\" [(ngModel)]=\"${1:variavel}\" (ngModelChange)=\"${2:funcao}()\">",
             "   <option [ngValue]=\"null\">Selecione</option>",
             "   <option *ngFor=\"let obj of ${3:lista}\" [ngValue]=\"obj\">{{ obj.nome }}</option>",
             "</select>"
@@ -30,17 +44,23 @@
     "botao_angular": {
         "prefix": "_botao_angular",
         "body": [
-            "<button type=\"button\" title=\"${1:nomeBotao}\" (click)=\"${2:funcao}()\">${1}</button>"
+            "<button type=\"button\" class=\"btn btn-primary\" title=\"${1:nomeBotao}\" (click)=\"${2:funcao}()\">${1}</button>"
         ],
         "description": "Cria botão com click chamando função"
     },
 
+    "botao_angular_tabela": {
+        "prefix": "_botao_angular_tabela",
+        "body": [
+            "<button type=\"button\" class=\"btn-xs btn-primario\" title=\"${1:botao}\" (click)=\"${2:funcao}()\"><i class=\"fa fa-pencil\"></i></button>"
+        ],
+        "description": "Cria botão com click chamando função"
+    },
     "input_angular": {
         "prefix": "_input_angular",
         "body": [
-            "<input type=\"text\" [(ngModel)]=\"${1:variavel}\" (ngModelChange)=\"${2:funcao}()\"/>"
+            "<input type=\"text\" class=\"form-control\" [(ngModel)]=\"${1:variavel}\" (ngModelChange)=\"${2:funcao}()\"/>"
         ],
         "description": "Cria input com ngModel e ngModelChange"
     }
-
 }
